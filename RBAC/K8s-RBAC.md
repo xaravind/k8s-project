@@ -51,9 +51,7 @@ We can also use a manual method involving **Certificate Signing Request (CSR)** 
 4. Create a custom kubeconfig pointing to the user’s cert and key.
 5. Define RBAC roles and bind them to the username.
 
----
-
-We mostly rely on **IAM-based access** for production clusters, but I’ve also worked with **manual CSR setup** in dev/test environments where IAM integration wasn't available.
+> We mostly rely on **IAM-based access** for production clusters, but I’ve also worked with **manual CSR setup** in dev/test environments where IAM integration wasn't available.
 
 ---
 
