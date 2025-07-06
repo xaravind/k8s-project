@@ -1,0 +1,23 @@
+#aws-auth.yaml
+apiVersion: v1
+data:
+  mapRoles: |
+    - groups:
+      - system:bootstrappers
+      - system:nodes
+      rolearn: arn:aws:iam::115690362715:role/eksctl-project-nodegroup-k8s-rbac-NodeInstanceRole-FtGJ9sEaUvy1
+      username: system:node:{{EC2PrivateDNSName}}
+# here you need to give role-name, IAM user name and ARN details 
+  mapUsers: |
+    - groups:
+      -  ReadOnlyProject
+      userarn: arn:aws:iam::115690362715:user/Aravind   
+      username: Aravind 
+kind: ConfigMap
+# remove reource version but don't remove uid
+metadata:
+  creationTimestamp: "2025-07-06T06:20:09Z"
+  name: aws-auth
+  namespace: kube-system
+#  resourceVersion: "1339"
+  uid: bd29dd6b-8f69-4799-8337-2588cf734a6d
