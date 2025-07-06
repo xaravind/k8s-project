@@ -174,6 +174,11 @@ Follow these steps:
 
 > 💡 This policy allows the IAM user to run `kubectl` and describe EKS cluster details — it's the minimal requirement for authentication.
 
+Reference screenhots:- 
+
+<img width="2556" height="1362" alt="Image" src="https://github.com/user-attachments/assets/a58cda5e-090c-46c7-944d-ac4021d526ac" />
+<img width="2543" height="923" alt="Image" src="https://github.com/user-attachments/assets/0b97d940-1481-4d56-b50b-f441fa0a6b29" />
+
 ---
 
 ####  **2: Create IAM User and Attach the Policy**
@@ -189,6 +194,15 @@ Follow these steps:
 7. Review and click **Create user**
 
 > ✅ This IAM user can now be mapped to your EKS cluster for controlled access using RBAC.
+
+<img width="2538" height="818" alt="Image" src="https://github.com/user-attachments/assets/980b4572-f980-4d6e-a619-5f0f9fa97dca" />
+
+<img width="2557" height="921" alt="Image" src="https://github.com/user-attachments/assets/2ad6940e-aef5-4db5-9b21-add38b13e1dd" />
+
+<img width="2559" height="1213" alt="Image" src="https://github.com/user-attachments/assets/4395d977-3839-4938-974a-dd3e1f9d0f07" />
+
+<img width="2518" height="577" alt="Image" src="https://github.com/user-attachments/assets/81abc6a3-79a5-44eb-bb88-a441fda0242a" />
+
 
 ---
 
@@ -285,6 +299,8 @@ In the above manifest:
 The `aws-auth` **ConfigMap** in an Amazon EKS cluster is a **critical configuration file** that manages both **authentication and authorization** for IAM users and roles.
 
 In this file, we need to add IAM user details — like **username** and **ARN**. This lets the cluster authenticate the IAM user and determine whether the user is authorized.
+
+<img width="2548" height="954" alt="Image" src="https://github.com/user-attachments/assets/02cc4e27-5d3c-4780-a65d-1528aad1e948" />
 
 
 ```bash
@@ -411,6 +427,8 @@ In our setup:
 2. Navigate to **Security credentials** → click **Create access keys**
 3. Choose **Command Line Interface (CLI)**, acknowledge the prompt, and click **Create Access Key**
 4. **Copy the credentials** — these will be used to authenticate via AWS CLI
+
+<img width="2559" height="1164" alt="Image" src="https://github.com/user-attachments/assets/a0cd4391-25f8-4a33-8ae4-4da12f576572" />
 
 ----
 
