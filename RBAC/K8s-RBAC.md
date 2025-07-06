@@ -133,7 +133,9 @@ eksctl create cluster --config-file=eks.yml
 📘 **Need Full Setup?**
 For a complete step-by-step EKS cluster creation guide, check out my detailed post here:
 
-🔗 [Full Project Setup Guide – GitHub | Docker | EKS](https://www.linkedin.com/posts/aravindbasava_full-project-setup-guide-github-docker-activity-7340076843821076480-45Do?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFStkm8ByBZVTiaoJaammsNqJjRfcKUCgVA)
+🐳 K8s – 3/3
+ Kubernetes Project – 1/2
+🔗 (https://www.linkedin.com/posts/aravindbasava_full-project-setup-guide-github-docker-activity-7340076843821076480-45Doutm_source=share&utm_medium=member_desktop&rcm=ACoAAFStkm8ByBZVTiaoJaammsNqJjRfcKUCgVA)
 
 ---
 
@@ -841,59 +843,59 @@ KUBECONFIG=./test-env.kubeconfig kubectl delete pod <pod-name>  # ❌ should be 
 
 ---
 
-## 🔐 **Kubernetes User Access Methods – Complete List**
+##  **Kubernetes User Access Methods – Complete List**
 
-### ✅ 1. **IAM-based Access (EKS Specific)**
+###  1. **IAM-based Access (EKS Specific)**
 
 * Used in: **Amazon EKS**
 * Auth via: **IAM user or role**
 * Managed by: `aws-iam-authenticator` + `aws-auth` ConfigMap
 * Tools: `eksctl`, `kubectl`
-* 🔒 Secure, AWS-native
-* 🎯 Ideal for: EKS production clusters
+*  Secure, AWS-native
+*  Ideal for: EKS production clusters
 
 ---
 
-### ✅ 2. **OIDC-based Access (SSO / SAML Integration)**
+###  2. **OIDC-based Access (SSO / SAML Integration)**
 
 * Used in: EKS, GKE, AKS, self-managed clusters
 * Auth via: **Identity Providers** (Okta, Azure AD, Google, etc.)
 * Integration via: OIDC plugins / `kubectl` with OIDC tokens
 * Tools: `Dex`, `Keycloak`, `kube-oidc-proxy`, `pinniped`
-* 🔐 Enables SSO, MFA, group-based access
-* 🎯 Ideal for: Enterprise environments
+*  Enables SSO, MFA, group-based access
+*  Ideal for: Enterprise environments
 
 ---
 
-### ✅ 3. **Client Certificate-Based Access (Manual CSR method)**
+###  3. **Client Certificate-Based Access (Manual CSR method)**
 
 * Used in: Any K8s cluster (Kops, kubeadm, on-prem)
 * Auth via: **x.509 certificate**
 * Steps: Generate key + CSR → approve → get cert → make kubeconfig
-* 🔧 Very manual, but good for labs, non-cloud clusters
-* 🎯 Ideal for: Learning internals, on-prem clusters
+* Very manual, but good for labs, non-cloud clusters
+* Ideal for: Learning internals, on-prem clusters
 
 ---
 
-### ✅ 4. **Static Token-Based Access**
+###  4. **Static Token-Based Access**
 
 * Auth via: Token specified in kubeconfig
 * Created manually or via static file referenced in API server
-* ⚠️ Not recommended for production
-* 🎯 Good for: Testing, demos, bootstrapping
+*  Not recommended for production
+*  Good for: Testing, demos, bootstrapping
 
 ---
 
-### ✅ 5. **ServiceAccounts (For Pods / Automation)**
+###  5. **ServiceAccounts (For Pods / Automation)**
 
 * Not for human users
 * Mounted automatically in pods for in-cluster access
 * Can also be used by automation (e.g., GitLab Runner, ArgoCD)
-* 🎯 Ideal for: CI/CD, apps needing API access
+*  Ideal for: CI/CD, apps needing API access
 
 ---
 
-### ✅ 6. **Kube API Gateway Solutions (Optional Layer)**
+###  6. **Kube API Gateway Solutions (Optional Layer)**
 
 * Tools: **Teleport**, **KubeGate**, **Kubeapps**, **Rancher**, etc.
 * Features: Web UI + RBAC + SSO + Audit
@@ -902,11 +904,11 @@ KUBECONFIG=./test-env.kubeconfig kubectl delete pod <pod-name>  # ❌ should be 
   * Centralized access
   * Session tracking
   * MFA, Role switching
-* 🎯 Ideal for: Teams managing access across multiple clusters
+*  Ideal for: Teams managing access across multiple clusters
 
 ---
 
-## ✅ Optional Mentions (if your audience is more advanced)
+##  Optional Mentions (if your audience is more advanced)
 
 | Method                               | Description                                                      | When Useful                    |
 | ------------------------------------ | ---------------------------------------------------------------- | ------------------------------ |
